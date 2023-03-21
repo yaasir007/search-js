@@ -2,7 +2,6 @@ const searchbarElement = document.querySelector(".searchbar");
 const teamsElement = document.querySelector(".teams");
 const teamElement = document.querySelectorAll(".team");
 
-
 searchbarElement.addEventListener("keyup", () => {
   let searchbarValue = document.querySelector(".searchbar").value;
   searchbarValue = searchbarValue.toLowerCase();
@@ -16,5 +15,4 @@ searchbarElement.addEventListener("keyup", () => {
       teamElement[i].style.display = "list-item";
     }
   }
-
 });
