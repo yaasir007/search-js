@@ -10,8 +10,10 @@ searchbarElement.addEventListener("keyup", () => {
   for (let i = 0; i < teamElement.length; i++) {
     let team = teamElement[i].innerHTML.toLowerCase();
 
-    if (team.includes(searchbarValue)) {
-      teamsElement.innerHTML = `<li class="team">${teamElement[i]}</li>`;
+    if (!team.includes(searchbarValue)) {
+      teamElement[i].style.display = "none";
+    } else {
+      teamElement[i].style.display = "list-item";
     }
   }
 
